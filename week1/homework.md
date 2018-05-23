@@ -11,3 +11,9 @@ You will build:
 
 ### Hints
 - https://expressjs.com/en/starter/hello-world.html
+- Don't forget to create a
+
+
+## Part 2
+
+Create a new node program called `part2.js` that will use MongoDB/Mongoose model a pet store.
