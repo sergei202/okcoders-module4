@@ -11,9 +11,38 @@ You will build:
 
 ### Hints
 - https://expressjs.com/en/starter/hello-world.html
-- Don't forget to create a
+- Don't forget to `npm install express`
 
 
 ## Part 2
 
-Create a new node program called `part2.js` that will use MongoDB/Mongoose model a pet store.
+We're going to create a very simple node program to model a car dealership's inventory.
+
+Create a new node program called `part2.js` that will use MongoDB/Mongoose as the database.
+
+We'll need to track these properties for each car in inventory:
+- Make
+- Model
+- Year
+- Color
+- VIN
+
+Here's an example of a car document:
+```js
+{
+	make: 'Honda',
+	model: 'Accord',
+	year: '2007',
+	color: 'blue',
+	vin: '1G1JE5SHXC4195830'
+}
+```
+
+Create two functions to interact with our database:
+- `getCars()`: Returns a Promise with an array of the documents
+- `createCar(car)`: Creates and saves a car document (and returns the saved document)
+
+### Hints
+- http://mongoosejs.com/docs/index.html
+- Don't forget to `npm install express`
+- If something doesn't make sense, ASK QUESTIONS!
