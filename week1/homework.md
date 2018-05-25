@@ -42,7 +42,30 @@ Create two functions to interact with our database:
 - `getCars()`: Returns a Promise with an array of the documents
 - `createCar(car)`: Creates and saves a car document (and returns the saved document)
 
+Use these functions to create a car and then list all cars.  Here is an example:
+
+```js
+createCar({
+	make: 'Honda',
+	model: 'Accord',
+	year: '2007',
+	color: 'blue',
+	vin: '1G1JE5SHXC4195830'
+}).then(honda => {						// .then() only runs after createCar() is finished (when the problem is resolved)
+	console.log('createCar() returned %j', honda);
+	return getCars().then(cars => {		// Same with this .then(), it only runs after getCars() finishes
+		console.log('getCars() returned %j', cars);
+	});
+});
+```
+
+If your two functions (`getCars()` and `createCar()`) are written correctly, you'll see the two console outputs AND have data in the `cars` collection.
+Check with Robo3T to make sure you have data there!
+
+
 ### Hints
 - http://mongoosejs.com/docs/index.html
-- Don't forget to `npm install express`
+- [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- Don't forget to `npm install mongoose`
+- This is server-side ONLY, no Angular, no browser
 - If something doesn't make sense, ASK QUESTIONS!
