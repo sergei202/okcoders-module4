@@ -69,3 +69,10 @@ Check with Robo3T to make sure you have data there!
 - Don't forget to `npm install mongoose`
 - This is server-side ONLY, no Angular, no browser
 - If something doesn't make sense, ASK QUESTIONS!
+
+
+## Part 3
+
+Add Part 1 and Part 2 together:  Create an Mongoose program with express routes.
+
+NOTE: This wasn't assigned, it was an in-class example.

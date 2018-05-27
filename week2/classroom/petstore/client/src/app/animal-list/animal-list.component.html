@@ -1,0 +1,15 @@
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Adopted</th>
+	</tr>
+	<tr *ngFor="let animal of animals">
+		<td>{{animal.name}}</td>
+		<td>{{animal.type}}</td>
+		<td>{{animal.adopted}}</td>
+	</tr>
+	<tr *ngIf="animals && !animals.length">
+		<td colspan="99" class="text-center text-muted">No animals here yet</td>
+	</tr>
+</table>
